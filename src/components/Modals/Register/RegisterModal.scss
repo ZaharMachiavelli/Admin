@@ -1,0 +1,157 @@
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @media (min-width: 960px) {
+    background: var(--bg-main);
+  }
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0;
+  background: var(--color-black-bg);
+
+  @media (min-width: 960px) {
+    height: 80vh;
+    max-height: 800px;
+    max-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-desktop-frame);
+  }
+}
+
+.logo {
+  display: none;
+}
+.enterYandex {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'ElMessiri', serif;
+}
+.ageSelectionText {
+  margin: 40px 0 30px;
+  line-height: 18px;
+  @media (min-width: 370px) {
+    font-size: 22px;
+  }
+}
+
+.YABlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  & > p{
+    margin: 0;
+    font-family: 'FiraSansExtraCondensed_light', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.YALoginBtn {
+  position: relative;
+  margin-bottom: 5px;
+  padding: 10px 20px 10px 60px !important;
+  background: var(--dark-texture), radial-gradient(#fff 40%, #aaa 100%);
+  color: black;
+  text-shadow: none;
+  border-bottom-color: #888;
+  user-select: none;
+  &:before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: url("/src/assets/images/icons/YALetter.png") center / contain;
+  }
+  &:active {
+    -webkit-tap-highlight-color:  transparent;
+    background: var(--dark-texture), radial-gradient(#ddd 40%, #aaa 100%);
+    border-bottom-color: #777;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  
+  .container {
+    padding: 30px 0;
+  }
+  .logo {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin-top: -80px;
+  }
+  .nameInputLabel {
+    font-size: 24px;
+  }
+  .nameInput {
+    width: 500px;
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+  .content {
+    margin: 30px auto 0px;
+    justify-content: flex-start;
+  }
+  .YALoginBtn {
+    ::before {
+      left: 38%;
+    }
+  }
+
+  .ageSelectionText {
+    max-width: 600px;
+    margin: 25px auto;
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .ageBtnsRow {
+    & > button {
+      margin: 0 15px;
+      padding: 12px 40px;
+      font-size: 22px;
+    }
+  }
+
+  .YABlock {
+    & > button {
+      font-size: 26px;
+      margin-bottom: 10px;
+      padding: 10px 30px;
+      width:50%;
+      & > img {
+        width: 31px !important;
+      }
+    }
+    & > p{
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}

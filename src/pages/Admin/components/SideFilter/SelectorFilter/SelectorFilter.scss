@@ -1,0 +1,173 @@
+.FilterVariant {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2vw;
+
+    
+
+    button {
+        border: 0;
+        border-radius: 0.7vw;
+        height: 2.5vw;
+        width: 100%;
+    }
+    
+    .lowerFilterContainer {
+        width:100%;
+    }
+
+    .choosedLineLower{
+        min-height: 45px;
+        background: #333333;
+        margin-bottom: 10px;
+        padding: 0 20px;
+
+        div {
+            display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        height: inherit;
+        align-items: center;
+        }
+
+        p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 18px;
+            color: #A5A5A5;
+            float: left;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+        color: #A5A5A5;
+        float: left;
+    }
+
+    span {
+        font-size: 10px;
+        color: #A5A5A5;
+    }
+
+    .dropedListLower {
+        flex-direction: column;
+        width: 100%;
+        min-width: 260px;
+        background: #333333;
+        border-radius: 20px;
+        padding: 0.9vw 0;
+    }
+
+    .listItem {
+        display: flex;
+        align-items: center;
+        margin: 7px auto;
+        background: transparent;
+        p {
+            display: flex;
+            align-items: center;
+            padding-left: 1vw;
+            margin: 0;
+            font-weight: 400;
+            font-size: 18px;
+            color: #A5A5A5;
+            float: left;
+        }
+    }
+
+    .listItem:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 0;
+    }
+
+}
+
+.disabledFilter {
+    cursor: default;
+    opacity: 0.2;
+
+    button {
+        cursor: default;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    
+    .FilterVariant {
+
+        .choosedLineLower {
+            min-height: 33px;
+            border-radius: 25px;
+
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .dropedListLower {
+            min-width: 175px;
+            background: #333333;
+            border-radius: 13px;
+            padding: 5px 0;
+        }
+
+        h2 {
+            padding:0;
+        }
+       
+    }
+
+    
+
+
+    
+    
+}
+
+@media screen and (max-width:500px) {
+
+    .FilterVariant {
+        .listItem {
+            margin: 10px auto;
+
+            p {
+                font-size: 16px;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 366px) {
+    .FilterVariant {
+        .listItem {
+            margin: 18px auto;
+
+            p {
+                font-size: 16px;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .FilterVariant {
+        .listItem {
+            margin: 21px auto;
+
+            p {
+                font-size: 16px;
+            }
+        }
+    
+    }
+}

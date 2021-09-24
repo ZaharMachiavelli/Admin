@@ -1,0 +1,117 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: inherit;
+}
+:root {
+  --body-height: 100vh;
+
+  --color-black-bg: #111111;
+  --color-red: #e80000;
+  --color-dark-red: #a00006;
+  --color-gray: #454545;
+  --color-dark-gray: #333333;
+  --color-blue: #1593D6;
+  --color-white: #FFF;
+  --color-blue-light: #54B3E9;
+  --color-peach-dark: #F18962;
+
+  --bg-main:
+          var(--bg-smoke-url) center / 100% auto,
+          linear-gradient(rgba(0,0,0, 0.85), rgba(0,0,0, 0.85)),
+          var(--bg-man_at_bot-url) top right / cover no-repeat,
+          var(--color-black-bg);
+
+  --bg-man-url: url('/src/assets/images/background/man_for_bg.png');
+  --bg-man: var(--bg-man-url) top / cover no-repeat;
+
+  --bg-man_at_bot-url: url('/src/assets/images/background/man.jpg');
+  --bg-man_at_bot: var(--bg-man_at_bot-url) bottom / cover no-repeat;
+
+  --bg-face-url: url("/src/assets/images/background/man.jpg");
+  --bg-face: var(--bg-face-url) right top / auto 100% no-repeat;
+  --bg-face_with-gradient: radial-gradient(circle at 80% 40%,
+          rgba(0, 0, 0, 0.2) 0%,
+          var(--color-black-bg) 50%,
+          var(--color-black-bg) 65%),
+  var(--bg-face),
+  #000;
+
+  --bg-build-url: url("/src/assets/images/background/nightComingBG.png");
+  --bg-build: var(--bg-build-url) left top / cover no-repeat;
+
+  --bg-cards-url: url("/src/assets/images/background/cards.jpg");
+  --bg-sparks-url: url("/src/assets/images/background/sparks.png");
+
+  --bg-smoke-url: url("/src/assets/images/background/smoke_bg.png");
+  --bg-smoke: var(--bg-smoke-url) top / cover no-repeat;
+
+  --bg-desktop-frame-url: url("/src/assets/images/background/desktopFrame.png");
+  --bg-desktop-frame: var(--bg-desktop-frame-url) center / 100% 100% no-repeat;
+
+  --dark-texture-url: url('/src/assets/images/background/btn-texture-dark.png');
+  --dark-texture: var(--dark-texture-url) center / 100% auto repeat;
+
+  --bg-border-image: url("/src/assets/images/background/border.png") 50 fill / 40px 40px 40px 40px;
+  --yandex-letter-url: url("/src/assets/images/icons/YALetter.png");
+  --yandex-letter_red-url: url("/src/assets/images/icons/YALetter_red.png");
+
+  --hr-url: url('/src/assets/images/details/hr.png');
+  --hr: var(--hr-url) center / 100% auto no-repeat;
+
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'FiraSansExtraCondensed', Arial, sans-serif;
+  text-align: center;
+  height: var(--body-height);
+  overflow: hidden;
+  color: white;
+
+  //  react-toastify
+  --toastify-color-light: var(--dark-texture-url) center / 100% auto repeat,
+  radial-gradient(56% 56% at 50% 44%, var(--color-gray) 33%, var(--color-dark-gray) 100%), var(--color-gray);
+  --toastify-text-color-light: #FFF;
+  --toastify-toast-width: max-content;
+  --toastify-toast-min-height: 52px;
+  @media (min-width: 768px) {
+    --toastify-toast-min-height: 64px;
+  }
+}
+
+#app-root, .application {
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  box-sizing: content-box;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  background: var(--color-black-bg);
+  cursor: pointer;
+  outline: none;
+}
+
+.bgFix {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-black-bg);
+  z-index: -2;
+}

@@ -1,0 +1,137 @@
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 38px;
+}
+.circle {
+  width: 250px;
+  max-width: 100%;
+  margin: 0 auto;
+  filter: drop-shadow(0px 0px 6vh #888888);
+  @media screen and (min-width: 1000px) {
+    width: 500px;
+  }
+}
+.circle__inner {
+  width: 100%;
+  padding-top: 100%;
+}
+.circle__wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.circle__caption {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  top: 25%;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 16px;
+  @media(max-width:999px) {
+    font-size: 18px;
+  }
+}
+.circle__total {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  top: 50%;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 16px;
+  @media(max-width: 999px) {
+    font-size: 40px;
+  }
+}
+circle {
+fill: rgba(0,0,0,0);
+stroke: #E80000;
+stroke-width: 10px;
+  &:nth-child(2n) {
+    fill: rgba(0,0,0,0);
+    stroke: #00a44c;
+    }
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.row__value {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.item__caption {
+  display: flex;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+.dotRed {
+  background: #E80000;
+}
+.dotGreen {
+  background: #00a44c;
+}
+.mobileOnly {
+  @media screen and (min-width: 1000px){
+    display: none;
+  }
+}
+.rowDesktop {
+  position: absolute;
+  bottom: 24%;
+  left: 50px;
+  right: 50px;
+  margin: auto;
+  display: none;
+  @media screen and (min-width: 1000px){
+    display: flex;
+  }
+}
+.desktopOnly {
+
+  //@media screen and (min-width: 1000px){
+  //  display: unset;
+  //}
+}
+.timer {
+  --deg: -1;
+  --col: green;
+  height: 500px; 
+  width: 500px;
+  border-radius: 50%;
+  text-align: center;
+  background-image: conic-gradient(var(--col) calc(var(--deg) * 1deg - 1deg), red calc(var(--deg) * 0deg));
+  box-shadow: inset 0 0 10px -5px #000a;
+  @media(max-width:999px) {
+    width: 250px;
+    height:250px;
+  } 
+}
+.timerContainer {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  @media(max-width:999px){
+    width: 250px;
+    height:250px;
+  }
+}
+.row__item {
+  @media(max-width:999px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

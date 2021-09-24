@@ -1,0 +1,69 @@
+@import "/src/styles/utils.scss";
+
+.container {
+  background: #222222;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  @extend %hideScrollbar
+}
+.content {
+  width: calc(100% - 80px);
+  padding: 20px;
+  overflow-y: auto;
+  @media(max-width:761px) {
+    padding: 20px 5px;
+  }
+}
+.topLine {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  h1 {
+    font-family: 'ElMessiri' !important;
+    font-size: 35px;
+    float: left;
+    @media screen and (max-width: 960px) {
+      font-size: 27px;
+    }
+    @media(max-width:761px) {
+      margin-bottom: 10px;
+    } 
+  }
+  @media(max-width:761px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+.statistic {
+  display: block;
+}
+.filterContainer {
+  width: 250px;
+  height: inherit;
+  margin-right: 80px;
+  z-index: 5;
+  @media screen and (max-width: 1280px) {
+    margin-right: 40px;
+  }
+}
+.cardsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,200px);
+  justify-content: center;
+  @media(max-width:761px) {
+    grid-template-columns: repeat(auto-fit,140px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .topLine {
+    h1 {
+      margin-left: 18px;
+    }
+  }
+}
+
+

@@ -1,0 +1,141 @@
+@import "/src/styles/colors.scss";
+@import "/src/styles/utils.scss";
+
+$light-gary: #555;
+$gray: #333;
+$dark-gray: #222;
+$head-height: 80px;
+
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  z-index: 2;
+}
+.head {
+  width: inherit;
+  position: absolute;
+  top: 0;
+  height: 0;
+  .ellipse, .progress {
+    height: $head-height;
+    width: 100%;
+    -webkit-clip-path: ellipse(70% 110% at 50% 120%);
+    clip-path: ellipse(70% 110% at 50% 120%);
+  }
+  .ellipse {
+    transform: translateY(-100%);
+    background: $gray;
+  }
+  .progress {
+    transform: translateY(-2px);
+    background: $light-gary;
+  }
+}
+.headInGame {
+  .ellipse, .progress {
+    //height: $head-height-inGame;
+    -webkit-clip-path: ellipse(70% 110% at 50% 120%);
+    clip-path: ellipse(70% 110% at 50% 120%);
+  }
+  .ellipse {
+    background: $dark-gray;
+  }
+  .progress {
+    //top: calc(-#{$head-height-inGame} - 2px);
+  }
+}
+.homeBtns, .gameBtns {
+  height: $head-height;
+  width: 100%;
+  padding: 0 10px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.btn {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  border-radius: 50% 50%;
+  background: $color-black-bg;
+  border: none;
+}
+.profileBtn {
+  width: 70px;
+  height: 70px;
+  bottom: 8px;
+  background: radial-gradient(at 30% -20%, #A00006 25%, #e80000);
+  border: 2px solid black;
+  & > img {
+    width: calc(100% + 2px);
+    height: auto;
+    border-radius: 100px 100px;
+  }
+}
+.settingsBtn, .ratingBtn, .exitBtn {
+  width: 45px;
+  height: 45px;
+  bottom: 5px;
+}
+.settingsBtn {
+  background: url("/src/assets/images/icons/settings.svg") center / 65% auto no-repeat, #111
+}
+.ratingBtn {
+  background: url("/src/assets/images/icons/rating.svg") center / 65% auto no-repeat, #111;
+}
+.exitBtn {
+  background: url("/src/assets/images/icons/exit.svg") center / 50% auto no-repeat, #111;
+}
+.rulesBtn {
+  background: url("/src/assets/images/icons/rules.svg") center / 50% auto no-repeat, #111;
+}
+.otherGameBtn {
+  background: url("/src/assets/images/icons/otherGames.svg") center / 55% auto no-repeat, #111
+}
+
+.gameBtns {
+  padding: 0 10px 5px;
+  z-index: 1;
+  .logo {
+    //margin-bottom: 5px;
+    width: auto;
+    height: 70px;
+  }
+  .settingsBtn, .exitBtn {
+    bottom: 0;
+  }
+}
+.YALogin {
+  width: 60px;
+  position: absolute;
+  right: 0;
+  bottom: 90px;
+  padding: 4px;
+  background: white;
+  border-radius: 100px 0 0 100px;
+  & > img {
+    display: block;
+    margin-right: auto;
+  }
+}
+
+.botCompContainer {
+  width: inherit;
+  padding: 5px 10px 10px;
+  display: flex;
+  align-items: center;
+  background: $gray;
+  & > :nth-child(2){
+    margin-left: 10px;
+  }
+}
+.botCCInGame {
+  background: $dark-gray;
+}

@@ -1,0 +1,116 @@
+
+.displayFlex {
+    display: flex;
+}
+.displayNone {
+    display: none;
+}
+.filter {
+    background: #282828;
+    justify-content: space-between;
+    color:#fff;
+    flex-direction: column;
+    width: 335px;
+    height: 95%;
+    padding: 10px 30px;
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    border-radius: 30px;
+    justify-content: space-between;
+    color: #fff;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-sizing: border-box;
+    h1 {
+        font-family: "ElMessiri", sans-serif;
+        font-weight: 500;
+        font-size: 28px;
+    }
+    h2 {
+        text-align: start;
+        font-family: "Fira Sans Extra" Condensed;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #959595;
+        padding:25px 0;
+    }
+    .acceptBtn {
+        color: white;
+        background: #E80000;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+        border-radius: 24px;
+        border: 0;
+        width: 100%;
+        min-height: 50px;
+    }
+}
+.filterHead {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+    .buttonFilter {
+        border: none;
+        display: flex;
+        background: #282828 !important;
+    }
+    p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+        color: #555555;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+.buttonsRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    button {
+        width: 45%;
+    }
+    margin-bottom: 30px;
+}
+.filterElem {
+    width: 100%;
+}
+@media screen and (max-width: 960px) {
+    .filter {
+        position: fixed;
+        width: calc(100% - 85px);
+        height: calc(100% - 60px);
+        top:65px;
+        right: 5px;
+        bottom: 5px;
+    .acceptBtn {
+        min-height: 40px;
+        align-items: center;
+        width: max-content;
+        padding: 0 16px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    }
+}
+
+

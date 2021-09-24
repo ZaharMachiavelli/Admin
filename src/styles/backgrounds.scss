@@ -1,0 +1,38 @@
+@import "/src/styles/colors.scss";
+
+%bg_man {
+  background: url('/src/assets/images/background/man_for_bg.png') top / 100% no-repeat, $color-black-bg;
+}
+%bg_manAtBottom {
+  background:
+          linear-gradient(rgba($color-black-bg, 0.85), rgba($color-black-bg, 0.85)),
+          url('/src/assets/images/background/man.jpg') bottom / 100% no-repeat, $color-black-bg;
+}
+%bg_face {
+  background:
+          radial-gradient(circle at 80% 40%, rgba(0,0,0,0.2) 0%, rgba($color-black-bg, 0.9) 50%, rgba($color-black-bg, 1) 65%),
+          url("/src/assets/images/background/man.jpg") 60% top / auto 100% no-repeat;
+  @media screen and (min-width: 960px) {
+      background-position: right top;
+  }
+}
+%bg_build {
+  background: url("/src/assets/images/background/man.jpg") left top / auto 140% no-repeat;
+}
+%bg_smoke {
+  background: url("/src/assets/images/background/smoke_bg.png") top / contain, $color-black-bg;
+}
+
+%bg_border {
+  border-image: url("/src/assets/images/background/border.png") 50 fill / 40px 40px 40px 40px;
+}
+
+%desktop_frame {
+  background: url('/src/assets/images/background/desktopFrame.png') center / 100% 100% no-repeat;
+}
+%prison {
+  background: url('/src/assets/images/icons/prison.png') center / 100% 100%;
+}
+%dead {
+  background: url('/src/assets/images/icons/skull.svg') center / 100% 100%;
+}

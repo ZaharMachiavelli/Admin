@@ -1,0 +1,57 @@
+@import "/src/styles/colors.scss";
+
+%fading {
+  -webkit-mask-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20px, rgb(0, 0, 0) calc(100% - 30px), rgba(0, 0, 0, 0) 100%);
+  mask-image: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20px, rgb(0, 0, 0) calc(100% - 30px), rgba(0, 0, 0, 0) 100%);
+  mask-image: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20px, rgb(0, 0, 0) calc(100% - 30px), rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20px, rgb(0, 0, 0) calc(100% - 30px), rgba(0, 0, 0, 0) 100%);
+}
+
+%red-shadow {
+  box-shadow: $color-red 0 0 15px 0 !important;
+}
+
+%framed {
+  padding: 25px 30px;
+  text-align: center;
+  background: linear-gradient(90deg,
+          rgba(0,0,0,0) 0%,
+          rgba(255,255,255,0.05) 10%,
+          rgba(255,255,255,0.05) 90%,
+          rgba(0,0,0,0) 100%);
+  backdrop-filter: blur(5px);
+  @media (min-height: 700px) {
+    font-size: 18px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: url("/src/assets/images/details/h_border.svg") center / auto 100% no-repeat;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    background: url("/src/assets/images/details/h_border.svg") center / auto 100% no-repeat;
+    transform: rotate(180deg);
+  }
+}
+
+%hideScrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
+}

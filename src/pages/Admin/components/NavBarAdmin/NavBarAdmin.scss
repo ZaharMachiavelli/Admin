@@ -1,0 +1,88 @@
+.container {
+  position: sticky;
+  width: 80px;
+  top:0;
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 15;
+  & > div, button {
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
+
+.logo {
+  width: 70px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 15px;
+  background: url("/src/assets/images/admin/logo.svg");
+}
+
+.statisticBtn {
+  width: 40px;
+  height: 40px;
+  margin-top: 45px;
+  background: url("/src/assets/images/admin/statistic.svg"); 
+}
+
+.statisticBtnOn {
+  width: 40px;
+  height: 40px;
+  margin-top: 45px;
+  background: url("/src/assets/images/admin/statisticOn.svg");
+}
+
+.tablesBtn {
+  width: 35px;
+  height: 40px;
+  margin-top: 45px;
+  background: url("/src/assets/images/admin/tables.svg"); 
+}
+
+.tablesBtnOn {
+  width: 35px;
+  height: 40px;
+  margin-top: 45px;
+  background: url("/src/assets/images/admin/tablesOn.svg"); 
+}
+
+.playersBtn {
+  width: 25px;
+  height: 40px;
+  margin-top: 45px;
+  background: url("/src/assets/images/admin/players.svg"); 
+}
+
+.playersBtnOn {
+  width: 25px;
+  height: 40px;
+  margin-top: 45px;
+  background: url("/src/assets/images/admin/playersOn.svg")
+}
+
+.notificationsBtn {
+  width: 25px;
+  height: 40px;
+  margin-top: 45px;
+  background: url("/src/assets/images/admin/notifications.svg");
+  opacity: 0.4;
+}
+
+.notificationsBtnOn {
+  width: 25px;
+  height: 40px;
+  margin-top: 45px;
+  background: url("/src/assets/images/admin/notificationsOn.svg");
+}
+
+.exitBtn {
+  margin-top: auto;
+  margin-bottom: 20px;
+  width: 32px;
+  height: 40px;
+  background: url("/src/assets/images/admin/logout.svg");
+}

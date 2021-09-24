@@ -1,0 +1,111 @@
+.JitsiParticipant, .JitsiVideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+}
+.JitsiParticipant, .noVidBg {
+  background: url("/src/assets/images/icons/video_off-icon.svg") center / 50px auto no-repeat, var(--color-black-bg);
+}
+.JitsiVideo {
+  object-fit: cover;
+  pointer-events: none;
+}
+.JitsiVideo::-webkit-media-controls,
+.JitsiVideo::-webkit-media-controls-start-playback-button,
+.JitsiVideo::-webkit-media-controls-panel,
+.JitsiVideo::-webkit-media-controls-play-button,
+.JitsiVideo::-webkit-media-controls-start-playback-button,
+.JitsiVideo::-webkit-media-controls-overlay-play-button, {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0 !important;
+}
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+.noVidBg {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border-radius: inherit;
+}
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-black-bg);
+  border-radius: inherit;
+  & > img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.btns {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 20px;
+  z-index: 1;
+}
+
+.reloadBtn, .microOn, .microOff, .videoOn, .videoOff, .audioOn, .audioOff {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50% 50%;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+.reloadBtn {
+  background: url("/src/assets/images/icons/reload-icon.svg") center / auto 90% no-repeat, rgba(150,150,150,0.6);
+}
+.microOn {
+  background: url("/src/assets/images/icons/microphone_on-icon.svg") center / auto 70% no-repeat, rgba(150,150,150,0.6);
+}
+.microOff {
+  background: url("/src/assets/images/icons/microphone_off-icon.svg") center / auto 70% no-repeat, rgba(150,150,150,0.6);
+}
+.videoOn {
+  background: url("/src/assets/images/icons/video_on-icon.svg") center / auto 50% no-repeat, rgba(150,150,150,0.6);
+}
+.videoOff {
+  background: url("/src/assets/images/icons/video_off-icon.svg") center / auto 70% no-repeat, rgba(150,150,150,0.6);
+}
+.audioOn {
+  background: url("/src/assets/images/icons/audio_on.svg") center / auto 60% no-repeat, rgba(150,150,150,0.6);
+}
+.audioOff {
+  background: url("/src/assets/images/icons/audio_off.svg") center / auto 60% no-repeat, rgba(150,150,150,0.6);
+}
+
+.FixConferenceBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+
+  background: #ff0000;
+  box-shadow: 0 0 10px black;
+  border: none;
+  border-radius: 6px;
+  z-index: 3;
+
+  text-transform: uppercase;
+}

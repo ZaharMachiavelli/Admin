@@ -1,0 +1,86 @@
+.ban_player {
+
+    display: flex;
+    padding: 8px 40px 8px 50px;
+    width:100%;
+    align-items: center;
+     
+    td {
+        display: flex;
+        width:100%;
+        align-items: center;
+        
+        
+        span {
+            font-family: "El Messiri";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 25px;
+            color: #959595;
+        }
+    
+        div {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+    
+            img {
+                margin-right:10px;
+            }
+    
+            span{
+                font-family: "Fira Sans Extra" Condensed;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 24px;
+                opacity: 0.25;
+            }
+        }
+    
+        .ban_count {
+            font-family: "Fira Sans Extra" Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+        }
+    
+        .ban_date {
+            display: block;
+            background: #383838;
+            border-radius: 19px;
+            margin-left: 30px;
+            font-family: "Fira Sans Extra "Condensed;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding: 9px 17px 9px 17px;
+        }
+    }
+
+    .end {
+        justify-content: flex-end;
+    }
+
+}
+
+.ban_player:nth-child(odd) {
+    background-color:#282828;
+}
+
+@media (max-width: 560px) {
+    .ban_player {padding: 0;}
+}
+
+@media (max-width:361px) {
+    .ban_player {
+        td {
+            .ban_date {margin:0;padding:0;}
+        }
+        
+    }
+}

@@ -1,0 +1,22 @@
+.badge {
+  position: relative;
+  width: 40px;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.imgGrey {
+  filter: grayscale(100%);
+  opacity: 0.4;
+}
+
+.span {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,32 @@
+.button {
+    background: #333333;
+    color: #888888;
+    font-weight: 400;
+    font-size: 18px;
+    border: 0;
+    border-radius: 0.7vw;
+    height: 2.5vw;
+    width: 100%;
+    cursor: pointer;
+    min-height: 40px;
+
+    h2 {
+        padding: 0;
+    }
+}
+
+
+
+.chosed {
+    background-color: red;
+    color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+    
+    .button {
+        border-radius: 10px;
+    }
+    
+
+}

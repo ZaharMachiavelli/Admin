@@ -1,0 +1,49 @@
+image: alpine
+
+stages:
+  - build
+  - deploy
+
+build:
+  only:
+    - master
+  image: node:latest
+  stage: build
+
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      -  "./dist"
+
+  script:
+    - ls
+    - npm i -force
+    - CI=false npm run build
+    - ls
+
+deploy:
+  only:
+    - master
+  stage: deploy
+  # install zip dependency
+  before_script:
+    - apk update
+    - apk add zip
+
+  script:
+    - ls
+    - apk add --no-cache rsync openssh
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_dsa
+    - chmod 600 ~/.ssh/id_dsa
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - rsync -rav --delete dist/ human@192.168.0.101:/home/human/deploy/mafia_frontend
+
+  # zip files for release, structured how we want
+  after_script:
+    - cd dist && zip -r mafia.zip ./* && mv ./mafia.zip ../
+
+  artifacts:
+    paths:
+      - 'mafia.zip'
+

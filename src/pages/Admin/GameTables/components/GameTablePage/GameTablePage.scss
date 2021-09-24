@@ -1,0 +1,225 @@
+@import "/src/styles/utils.scss";
+.containerGamePage{
+  height: 100%;
+  width: 100%;
+  background: #222222;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+  .content {
+    width: calc(100% - 80px);
+    padding: 20px; 
+  }  
+}
+.topLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topLineLeftBtn {
+  display: flex;
+  align-items: center; 
+  h1 {
+    line-height: min-content;
+    font-size: 34px;
+    font-family: 'El Messiri';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    @media (max-width:960px) {
+      font-size: 24px;
+    }
+    @media(max-width:761px) {
+      font-size: 18px;
+    }
+  }
+  button {border: none; padding: 10px; background: #222222 !important;}
+  img {
+    margin: auto;
+  }
+}
+.topLineRightContainer {
+  display: flex;
+  width:max-content;
+  align-items: center;
+  height: 60%;
+  @media (max-width:960px) {
+    display: none;
+  }
+  button:first-child {
+    margin-right: 10px;
+  }
+}
+.hr {
+  height: 2px;
+  background: #333333;
+  margin: 30px auto 25px auto;
+}
+.statusTableContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.statusTableTopContainer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  h2 {
+    padding: 0;
+    margin: 0 auto 0 10px;
+    font-family: "FiraSansExtraCondensed";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+  }
+  .playerIcon {
+    background: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    img {
+      position: relative;
+      bottom: -3%;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .randomIcon {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .statusCreaterTable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 160px;
+    border-radius: 40px;
+    padding: 12px;
+    border: 1px solid #333333;
+    p {
+      font-family: "FiraSansExtraCondensed";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #A5A5A5;
+    }
+  }
+  @media (max-width:960px) {
+    margin-bottom: 20px;
+  }  
+}
+.statusTableBtmContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .statusTableBtmRight, .statusTableBtmLeft {
+    display: flex;
+    height: inherit;
+    border-radius: 11px;
+    width: 48%;
+    padding: 10px 25px 10px 25px;
+    background: linear-gradient(234.6deg, #555555 0%, rgba(40, 40, 40, 0) 36.85%), #333333;
+    align-items: center;
+    height: 60px;
+    @media (max-width:960px) {
+      width: 100%;
+      padding: 10px 25px 0 25px;
+      margin-bottom: 15px;
+    }
+  }
+  .statusTableBtmLeft {
+    justify-content: space-between;
+    div {
+      display: flex;
+      align-items: center;
+    }
+    p {
+      height: min-content;
+      margin-left: 10px;
+      font-family: "FiraSansExtraCondensed";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      color: #959595;
+    }
+  }
+  .statusTableBtmRight {
+    flex-direction: column;
+    .statusTableBtmRightLower {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      p {
+        font-family: "FiraSansExtraCondensed";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+    .progressLineContainer {
+      width: 100%;
+      height: 8px;
+      border-radius: 8px;
+      margin: auto;
+      background: #484848;
+      .progressLine {
+        height: inherit;
+        border-radius: inherit;
+        background: #00A44C;
+      }
+    }
+  }
+  @media (max-width:960px) {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+.buttonsAdaptive {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  padding: 0 10%;
+  margin-bottom: 20px;
+  .topLineRight {
+    width:100%;
+  }
+  div {
+    width:100%;
+  }
+  div:first-child {
+    margin-bottom: 10px;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px 0;
+  }
+  @media (max-width:960px) {
+    display: flex;
+  }
+}
+.playersContainer {
+  margin-top: 60px;
+  overflow-y: scroll;
+  @extend %hideScrollbar;
+}
+
+

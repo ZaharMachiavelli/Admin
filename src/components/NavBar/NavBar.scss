@@ -1,0 +1,155 @@
+@import "../../styles/colors";
+@import "../../styles/utils";
+
+$light-gary: #555;
+$gray: #333;
+$dark-gray: #222;
+$head-height: 80px;
+
+.homeWrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  padding: 10px 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgb(70, 70, 70, 0.5);
+
+  & > div {
+    width: 100%;
+    &:nth-of-type(2) {
+      position: relative;
+      top: -60px;
+    }
+  }
+  & .btn {
+    width: 80%;
+  }
+
+}
+.btn {
+  border: none;
+  border-radius: 50% 50%;
+  background: #111;
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.btnTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileBtn {
+  width: 45px;
+  max-width: 80%;
+  border: none;
+  border-radius: 50% 50%;
+  background: red;
+  & > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50% 50%;
+    margin-top: auto;
+  }
+}
+.YALogin {
+  border: none;
+  border-radius: 50% 50%;
+  margin-bottom: 10px;
+}
+.rulesBtn {
+  background: url("/src/assets/images/icons/rules.svg") center / 45% auto no-repeat, #111;
+  margin-bottom: 20px;
+}
+.ratingBtn {
+  background: url("/src/assets/images/icons/rating.svg") center / 55% auto no-repeat, #111;
+  margin-bottom: 20px;
+}
+.otherGameBtn {
+  background: url("/src/assets/images/icons/otherGames.svg") center / 50% auto no-repeat, #111
+}
+.settingsBtn {
+  background: url("/src/assets/images/icons/settings.svg") center / 55% auto no-repeat, #111
+}
+.exitBtn {
+  background: url("/src/assets/images/icons/exit.svg") center / 50% auto no-repeat, #111
+}
+
+.gameWrapper {
+  width: 100%;
+  height: 100px;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: 0 20px 10px;
+  z-index: 2;
+
+  & .btn {
+    width: 40px;
+  }
+}
+.leftBlock {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+
+  border-radius: 10px;
+  background: #2f2f2f;
+
+  & > *:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+.name {
+  margin-right: auto !important;
+}
+.logo {
+  align-self: flex-end;
+  position: relative;
+  width: 150px;
+  margin: 0 100px;
+  &:after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("/src/assets/images/logo.png") bottom / contain no-repeat;
+  }
+}
+.botComp {
+  width: 100%;
+  max-height: 60px;
+  display: flex;
+  flex-direction: row;
+  & > :nth-child(2){
+    margin-left: 10px;
+  }
+}
+.progress{
+  width: 100%;
+  height: 4px;
+  z-index: 2;
+}

@@ -1,0 +1,118 @@
+.today_not span {
+    text-align: start;
+}
+
+.today_not {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Fira Sans Extra", Condensed, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    background: linear-gradient(234.6deg, #555555 0%, rgba(40, 40, 40, 0) 36.85%), #333333;
+    border-radius: 15px;
+    padding: 10px 35px 10px 15px;
+    position: relative;
+    margin-bottom: 20px;
+
+    button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 0px 10px;
+        background: url(../../../../../src/assets/images/admin/check.png) center / cover no-repeat;
+      }
+  }
+
+  .notification_info {
+    display: flex;
+    align-items: center;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-align: left;
+     .notificationAva {
+         margin-right: 15px;
+         display: flex;
+         width: 40px;
+         height: 40px;
+         align-items: center;
+         justify-content: center;
+         border-radius: 100px;
+        }
+
+}
+
+.notification_date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Fira Sans Extra", Condensed, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 16px;
+    color: #959595;
+}
+@media (max-width: 701px) {
+    .today_not {
+         display: block;
+         span {
+            text-align: center;
+        }
+     }
+     .notification_date {
+         justify-content: center;
+         margin-left: 0;
+         font-size: 14px;
+         text-align: center;
+     }
+     .notification_info {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         max-width: 100%;
+         span {
+             font-size: 14px;
+         }
+     }
+}
+@media (max-width:561px) {
+    .today_not {
+        display: block;
+        span {
+            text-align: center;
+        }
+    }
+    .notification_date {
+        justify-content: center;
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    .notification_info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        span {
+            font-size: 12px;
+        }
+    }
+} 
+.technical {
+    background-color: #E87D00;
+}
+.microtrouble {
+    background-color: #C800E8;
+}
+.videotrouble {
+    background-color: #7400E8;
+}
+.report {
+    background-color: #E80000;
+}

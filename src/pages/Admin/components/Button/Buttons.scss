@@ -1,0 +1,87 @@
+.topLineRightButton {
+    display: flex;
+    align-items: center;
+    button {
+        min-width: min-content;
+        
+        p {
+          color: #959595;
+          font-size: 18px;
+          margin: 0;
+          font-weight: 500;
+
+
+        }
+      }
+
+
+      button {
+        text-transform: uppercase;
+        border-radius: 10px;
+        padding: 13px 16px 13px 16px;
+        color:#fff;
+    }
+    
+    .ban {
+        background: rgba(232, 0, 0, 0.2);
+        border: 1px solid #A00006;
+        box-sizing: border-box;
+        border-radius: 10px;
+        text-transform: uppercase;
+        padding: 13px 16px 13px 16px;
+    }
+    
+    .delete {
+        background: #E80000;
+        border-radius: 10px;
+        border: none;
+        text-transform: uppercase;
+        padding: 13px 16px 13px 16px;
+    }
+    
+    .green {
+        background: #00A44C;
+        border-radius: 10px;
+        text-transform: uppercase;
+        border:none;
+    }
+    
+    .opacityGreen {
+        background: rgba(0, 164, 76, 0.2);
+        border: 1px solid #006630;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 13px 16px 13px 16px !important;
+    }
+    
+    .text {
+        font-family: 'Fira Sans Extra' Condensed;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.04em;
+        color:#fff;
+
+        @media (max-width:960px) {
+            font-size: 16px;
+        }
+
+        @media (max-width:760px) {
+            font-size: 14px;
+        }
+    }
+     
+}
+
+
+
+
+
+@media (max-width:768px) {
+
+    .ban,.delete,.green,.opacityGreen {
+        width:100%;
+    }
+}
+

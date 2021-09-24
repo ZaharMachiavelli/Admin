@@ -1,0 +1,383 @@
+@import "@/styles/colors.scss";
+
+.userPageItem {
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    background: linear-gradient(to right, rgb(41,41,41) 50%, transparent 99%);
+    width: 90%;
+    margin: 0px 5% 0px 5%;
+    border-radius: 50px 50px 50px 50px;
+    margin: 0 auto 10px;
+
+    .userScore:nth-child(4) {
+        margin-left: auto;
+    }
+}
+
+.totalOfVotingStringShadow {
+    // background: rgb(65,65,65);
+    background: linear-gradient(to right, #444444 10%, #333333 80%);
+    box-shadow: 0px 0px 37px -16px rgba(255, 255, 255, 0.288);
+}
+
+.userStringLowContainer {
+    margin-bottom: 10px;
+    &:nth-child(1) {
+        margin-top: 10px;
+    }
+    &:nth-last-child(-n +1) {
+        margin-bottom: 30vh;
+    }
+}
+
+
+.userPlace {
+    width: 4vw;
+    margin-left: 5vw;
+    margin-right: 1vw;
+    font-family: 'El Messiri', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 1.27604px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.userPictureContainer {
+    width: 9vw;
+    height: 9vw;
+    margin: 3px 1.5vw 2px 0;
+    background: red;
+    border-radius: 50% 50%;
+
+}
+
+
+.userPicture {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    bottom: -1px;
+}
+
+
+.resultConTurtle {
+    margin-left: auto;
+}
+
+.resultConLattice {
+    margin-left: auto;
+    margin-right: 27px;
+
+}
+
+.totalOfVoting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 85%;
+    background: red;
+    border-radius: 50%;
+    p {
+        line-height: 28px;
+        vertical-align: center;
+        @media screen and (max-width: 600px) {
+            font-size: 24px;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.totalOfVotingBorder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2vw 0 auto;
+    border: 0.5vw solid red;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 8vw;
+    height: 8vw;
+}
+
+
+.userPageItemShadow {
+    background: linear-gradient(to right, rgb(65,65,65) 30%, transparent 80%) !important;
+    -webkit-box-shadow: 0px 0px 37px -16px rgba(255, 255, 255, 0.288);
+    -moz-box-shadow: 0px 0px 37px -16px rgba(255, 255, 255, 0.288);
+    box-shadow: 0px 0px 37px -16px rgba(255, 255, 255, 0.288);
+}
+
+
+.userName {
+    margin-left: 9px;
+    font-family: 'FiraSansExtraCondensed', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-shadow: 0px 1.27604px 0px rgba(0, 0, 0, 0.25);
+    width: 40%;
+}
+
+.userScore {
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    width: 28vw;
+    height: 100%;
+}
+
+.userAch {
+    width: 7vw;
+    margin-right: 2vw;
+    top: -1.5vw;
+    h1 {
+        font-family: 'FiraSansExtraCondensed', sans-serif !important;
+        font-style: normal !important;
+        font-weight: 900 !important;
+        line-height: 12px !important;
+    }
+}
+
+
+@media screen and (max-width: 960px){
+    .userPlace {
+        font-size: 24px;
+    }
+    .userName {
+        font-size: 26px;
+    }
+
+    .userAch {
+        h1 {
+            font-size: 19px;
+            margin-top: -4vw;
+        }
+    }
+
+}
+
+@media screen and (max-width: 720px){
+    .ratingTitle {
+        font-size: 45px;
+
+        &:before, &:after {
+            width: 42px;
+            height: 24px;
+            top: calc(50% - 12px);
+        }
+
+        &:before {
+            left: -55px;
+        }
+        &:after {
+            right: -55px;
+        }
+    }
+    .userPlace {
+        font-size: 22px;
+    }
+    .userName {
+        font-size: 24px;
+    }
+
+    .userAch {
+        h1 {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 530px){
+    .ratingTitle {
+        font-size: 35px;
+        &:before, &:after {
+            width: 28px;
+            height: 16px;
+            top: calc(50% - 10px);
+        }
+        &:before {
+            left: -45px
+        }
+        &:after {
+            right: -45px
+        }
+    }
+    .userPlace {
+        font-size: 18px;
+    }
+    .userName {
+        font-size: 20px;
+    }
+    .userAch {
+        h1 {
+            font-size: 13px;
+            margin-top: -4.8vw;
+        }
+    }
+}
+
+
+@media screen and (max-width: 320px){
+    .userPlace {
+        font-size: 16px;
+    }
+    .userName {
+        font-size: 18px;
+    }
+    .userAch {
+        h1 {
+            font-size: 13px;
+            // margin-top: -17px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 960px){
+    .userScore {
+        width: 25vh;
+    }
+    .userPictureContainer {
+        width: 4vh ;
+        height: 4vh ;
+        img {
+            position: relative;
+            bottom: -3px;
+        }
+    }
+    .bigString {
+        margin-top: 0.5vh;
+        margin-bottom: 0.5vh;
+        width: 8vh;
+        height: 8vh;
+    }
+    .userStringLowContainer {
+        width: 90vh;
+        margin: 1vh auto;
+    }
+    .totalOfVotingBorder {
+        margin: 0.5vh 1vh 0.5vh auto;
+        border: 0.3vh solid red;
+        height:7.5vh;
+        width: 7.5vh;
+    }
+    .totalOfVoting {
+        width: 90%;
+        height: 90%;
+        p {
+            font-weight: 700;
+            font-family: El Messiri;
+            font-size: 34px;
+        }
+    }
+    .userPlace {
+        width: 3vh;
+        margin-left: 3vh;
+        margin-right: 1vh;
+        font-size: 19px;
+    }
+    .userName {
+        font-size: 20px;
+    }
+
+    .ratingPictureContainer{
+        width: 5.82vh;
+        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    .userAch {
+        width: 35px;
+        top: -5px;
+        h1 {
+            font-size: 15px;
+            margin-top: -2.5vh;
+        }
+    }
+    .ratingGradient {
+        display: none;
+    }
+    .userScore{
+        img {
+            margin-right: 10px;
+        }
+    }
+    .bigStringName {
+        font-size: 40px;
+    }
+    .bigStringPlace {
+        font-size: 34px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .userPlace {
+        font-size: 20px;
+    }
+    .userName {
+        font-size: 22px;
+    }
+    .userAch {
+        width: 4vh;
+        top: -1vh;
+    }
+
+    .bigStringName {
+        font-size: 36px;
+    }
+    .bigStringPlace {
+        font-size: 34px;
+    }
+}
+
+
+// @media screen and (min-width: 1280px){
+
+//     .userName {
+//         font-size: 26px;
+//     }
+//     .userPlace {
+//         margin-left: 30px;
+//         margin-right: 15px;
+//         font-size: 22px;
+//     }
+
+//     .ratingPicture{
+//         width: auto;
+//         height: 50px;
+//         margin-right: 5px;
+//     }
+// }
+
+// @media screen and (min-width: 1444px){
+//     .ratingPicture{
+//         width: 65px;
+//     }
+// }
+
+
+// @media screen and (min-width: 1600px){
+//     .ratingPicture{
+//         width: 70px;
+//     }
+// }
+
+
+// @media screen and (min-width: 1890px){
+//     .ratingPicture{
+//         width: 75px;
+//     }
+// }

@@ -1,0 +1,84 @@
+@import "/src/styles/utils.scss";
+
+.rulesPage {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  background: var(--bg-smoke), #000;
+  border-image: var(--bg-border-image);
+
+  @media (min-width: 960px) {
+    border-image: none;
+    background: var(--bg-main);
+    padding: 30px 0 0 0;
+  }
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+
+  @media (min-width: 960px) {
+    width: 90%;
+    max-width: 1000px;
+    height: 90%;
+    max-height: 1000px;
+    padding: 40px 80px 20px;
+    background: var(--bg-desktop-frame);
+  }
+}
+
+.logo {
+  width: 30vw;
+  @media (min-width: 960px) {
+    width: 200px;
+    margin-top: -30px;
+  }
+}
+
+.rulesTitle {
+  margin-bottom: 10px;
+  font-size: 26px !important;
+  line-height: 28px !important;
+  background-size: 100% 28px !important;
+  @media (min-height: 768px) {
+    font-size: 28px !important;
+    line-height: 30px !important;
+    background-size: 100% 30px !important;
+  }
+}
+
+.rulesText {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 120px;
+  overflow-y: auto;
+  font-size: 18px;
+  font-family: FiraSansExtraCondensed_light, sans-serif;
+  letter-spacing: 0.6px;
+  text-align: left;
+
+  @extend %fading, %hideScrollbar;
+
+  @media (min-width: 768px) {
+    font-size: 26px;
+  }
+  @media (min-width: 960px) {
+    line-height: 28px;
+  }
+}
+
+.content > button {
+  margin-top: auto;
+
+  @media (min-height: 768px) {
+    width: 200px;
+  }
+}

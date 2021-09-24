@@ -1,0 +1,40 @@
+image: docker:19.03.0
+
+services:
+  - docker:19.03.0-dind
+
+stages:
+  - test
+  - build
+
+before_script:
+  - docker -v
+  - docker info
+
+eslint:
+  image: node:12
+  stage: test
+  allow_failure: true
+  before_script:
+    - node -v
+    - npm -v
+  script:
+    - npm i --silent
+    - npm run lint
+  only:
+    - master
+    - cicd-setup
+
+build_api:
+  stage: build
+  variables:
+    IMAGE_TAG: registry.splinex-team.com/y-games/mafia/mafia_frontend:latest
+  script:
+    - echo -n $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+    - docker pull $IMAGE_TAG || true
+    - docker build --cache-from $IMAGE_TAG -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
+    - docker image prune -f
+  only:
+    - master
+    - cicd-setup

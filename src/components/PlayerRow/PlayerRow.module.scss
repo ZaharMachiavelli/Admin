@@ -1,0 +1,42 @@
+@import "/src/styles/colors.scss";
+//@import "/src/styles/utils.scss";
+
+.row {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 15px;
+  flex-shrink: 0;
+
+  border-radius: 45px;
+  background:
+          url('/src/assets/images/background/texture-dark.png') center / cover,
+          linear-gradient(90deg, rgb(64, 64, 64) 0.89%, rgb(38, 38, 38) 100%);
+}
+.rowID{
+  width: 10px;
+  font-family: "ElMessiri", serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #959595;
+  margin-right: 10px;
+}
+.avatar{
+  background: radial-gradient(at 30% -20%, #A00006 25%, $color-red);
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+.name {
+  margin-right: auto;
+  text-align: left;
+  font-family: 'FiraSansExtraCondensed', sans-serif;
+  font-size: 18px;
+  text-shadow: 0 1.27604px 0 rgba(0, 0, 0, 0.25);
+}
+.disabled {
+  opacity: 0.3;
+}
